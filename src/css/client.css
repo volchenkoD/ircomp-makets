@@ -1,0 +1,508 @@
+/* Обертка */
+.main__wrapper {
+    background: url('../../build/img/bg/main_bg.png') no-repeat top right;
+    font-family: Open Sans, sans-serif;
+    font-weight: 400;
+    background-size: cover;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 6.25rem 1200px 6.25rem;
+    grid-template-rows: 6.25rem auto;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+.main__header,
+.content,
+.modal {
+    grid-column: 2/3;
+}
+
+.modal {
+    display: none;
+}
+
+/* Верхнее меню */
+.main__header {
+    grid-row-start: 1;
+    display: grid;
+    grid-template-columns: 18.75rem auto;
+    column-gap: 2.5rem;
+    height: 2.25rem;
+}
+
+/* Логотип с бургером */
+.header__logo {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Логотип */
+.main_logo {
+    display: block;
+    background-image: url(/build/img/main__logo.png);
+    width: 11.25rem;
+    height: 4.25rem;
+    background-repeat: no-repeat;
+    background-position: center 10px;
+}
+
+/* Бургер меню */
+.burger__menu {
+    width: 3.125rem;
+    height: 1.875rem;
+    margin-top: 30px;
+    margin-left: 1.5rem;
+    border-right: 2px solid lightgrey;
+    padding-top: 5px;
+}
+
+.line {
+    width: 1.875rem;
+    border: 1px solid lightgrey;
+    margin-bottom: 6px;
+}
+
+/* Навигация верхняя */
+.header__nav {
+    display: flex;
+    background-color: #fff;
+    justify-content: space-between;
+    align-self: center;
+    margin-top: 1rem;
+}
+
+.header__nav ul {
+    width: 24.75rem;
+    display: flex;
+    list-style: none;
+}
+
+/* Выпадающий список */
+.header__nav select {
+    height: 4.25rem;
+    border: none;
+}
+
+.settings,
+.mail {
+    border: 1px solid lightgrey;
+    display: block;
+    width: 5.625rem;
+    height: 4.3rem;
+    position: relative;
+}
+
+.settings::before,
+.mail::before {
+    content: '';
+    background: url(/build/img/icons/setting.png) no-repeat center center;
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    top: 25%;
+    left: 30%;
+}
+
+.mail::before {
+    background: url(/build/img/icons/mail.png) no-repeat center center;
+}
+
+/* Кабинет пользователя */
+.main__cabinet {
+    width: 20rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid lightgrey;
+}
+
+.cabinet__name,
+.cabinet__image {
+    display: inline-block;
+}
+
+/* контентная часть */
+.content {
+    display: flex;
+}
+
+/* Боковое меню */
+
+.left__nav ul {
+    list-style: none;
+    width: 18.75rem;
+    height: 100%;
+}
+
+.left__nav ul li {
+    position: relative;
+}
+
+.left__nav ul a {
+    background-color: #fff;
+    color: black;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    border: 1px solid lightgray;
+    padding: 15px 20px;
+}
+
+.nav__client::before,
+.nav__lesson::before,
+.nav__group::before,
+.nav__teacher::before,
+.nav__student::before,
+.nav__lids::before,
+.nav__contract::before,
+.nav__add::before,
+.nav__exit::before {
+    content: '';
+    background-image: url('/build/img/icons/client.png');
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 10px;
+    left: 50px;
+}
+
+.nav__lesson::before {
+    background-image: url('/build/img/icons/calendar.png');
+}
+
+.nav__group::before {
+    background-image: url('/build/img/icons/group.png');
+    top: 10px;
+    left: 40px;
+}
+
+.nav__teacher::before {
+    background-image: url('/build/img/icons/teacher.png');
+    left: 45px;
+}
+
+.nav__student::before {
+    background-image: url('/build/img/icons/student.png');
+    left: 45px;
+}
+
+.nav__lids::before {
+    background-image: url('/build/img/icons/lids.png');
+    left: 45px;
+}
+
+.nav__contract::before {
+    background-image: url('/build/img/icons/contracts.png');
+    left: 45px;
+}
+
+.nav__add::before {
+    background-image: url('/build/img/icons/lock.png');
+    left: 45px;
+}
+
+.nav__exit::before {
+    background-image: url('/build/img/icons/exit.png');
+    left: 45px;
+}
+
+.left__nav li:nth-last-child(2) {
+    margin-top: 2.5rem;
+}
+
+/* Основной блок */
+.main__block {
+    margin-left: 2.5rem;
+    width: 60rem;
+}
+
+/* Панель работы с клиентами */
+.panell__controll {
+    background-color: #fff;
+}
+
+.panell__controll button {
+    cursor: pointer;
+    margin: 10px 0;
+    margin-left: 0px;
+    border: none;
+    padding: 10px 40px;
+    margin-right: -5px;
+    background-color: #268694;
+    color: white;
+}
+
+.panell__controll button:first-of-type {
+    margin-left: 1.25rem;
+}
+
+.panell__controll button:active {
+    border: none;
+}
+
+.panell__controll .add__client {
+    background-color: #27CAD2;
+    background-image: url(/build/img/icons/add.png);
+    background-repeat: no-repeat;
+    background-position: 20px 50%;
+}
+
+.panell__controll .update__client {
+    background-color: #29B4BB;
+    background-image: url(/build/img/icons/update.png);
+    background-repeat: no-repeat;
+    background-position: 20px 50%;
+}
+
+.panell__controll .mail__send {
+    background-color: #17999F;
+    background-image: url(/build/img/icons/update.png);
+    background-repeat: no-repeat;
+    background-position: 20px 50%;
+}
+
+.panell__controll .remove__client {
+    background-image: url(/build/img/icons/del.png);
+    background-repeat: no-repeat;
+    background-position: 15px 50%;
+}
+
+/* Отображение клиентов */
+.main__table {
+    background-color: #fff;
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.client__table {
+    width: 100%;
+    color: #23626A;
+    border-collapse: collapse;
+}
+
+
+
+.client__content {
+    height: 40px;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.client__table th {
+    font-weight: normal;
+    padding: 5px;
+}
+
+.table__head {
+    border: 1px solid lightgray;
+
+}
+
+/* Модальное окно */
+.modal {
+    position: absolute;
+    background-color: rgba(204, 204, 204, .4);
+    width: 100%;
+    height: 600px;
+}
+
+.client__form {
+    width: 550px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.client__form fieldset {
+    border: none;
+    margin-top: 15px;
+    width: 100%;
+    position: relative;
+}
+
+.modal label::before {
+    content: '';
+    height: 20px;
+    width: 20px;
+    border: none;
+    position: relative;
+    left: -10px;
+    top: -3px;
+}
+
+.client__form label {
+    display: inline-block;
+    width: 100px;
+}
+
+.client__form input[type="text"],
+.client__form input[type="tel"] {
+    display: inline-block;
+    width: 300px;
+    padding: 5px;
+}
+
+.client__form input[type="date"] {
+    color: grey;
+}
+
+.source {
+    width: 300px;
+    padding: 5px;
+}
+
+.filial {
+    width: 50px;
+}
+
+.gender__div {
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.gender__div p {
+    display: inline-block;
+    width: 15px;
+}
+
+.gender__div label {
+    width: 45px;
+    margin-left: 30px;
+    border: 1px solid grey;
+    padding-left: 20px;
+    position: relative;
+}
+
+.gender__div label::after {
+    content: '';
+    background-image: url(/build/img/icons/man.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 5px;
+    top: 3px;
+}
+
+.gender__div label:last-of-type::after {
+    background-image: url(/build/img/icons/woman.png);
+}
+
+#man:checked+label,
+#woman:checked+label {
+    background-color: var(--main-color);
+    color: white;
+}
+
+.gender__div label:last-of-type {
+    margin-left: 5px;
+}
+
+.gender__div input {
+    display: none;
+}
+
+.client__form p {
+    display: inline-block;
+}
+
+.client__form span {
+    cursor: pointer;
+    font-size: 10px;
+    text-decoration: underline;
+    color: var(--main-color);
+    display: block;
+    width: 100%;
+    text-align: right;
+    padding-right: 45px;
+}
+
+.add__contacts {
+    height: auto;
+}
+
+.add__number {
+    margin-left: 105px;
+    margin-top: 10px;
+}
+
+.client__form input::placeholder {
+    color: grey;
+}
+
+.school__value {
+    width: 100px;
+}
+
+label.class__label {
+    width: 50px;
+}
+
+label.change__label {
+    width: 50px;
+}
+
+.change__value,
+.class__value {
+    width: 40px;
+}
+
+.type__contracts label {
+    width: 90px;
+}
+
+.client__form .type__contracts {
+    margin-left: 40px;
+    display: inline-block;
+    width: 200px;
+    position: relative;
+}
+
+.client__form .type__contracts label {
+    width: 110px;
+    border-right: 1px solid grey;
+}
+
+.client__form .type__contracts p.first__contract {
+    position: absolute;
+    right: 0px;
+    top: -10px;
+}
+
+.client__form .type__contracts p.first__contract input,
+.client__form .type__contracts p.second__contract input {
+    margin-left: 5px;
+}
+
+.client__form .type__contracts p.second__contract {
+    position: absolute;
+    right: 0px;
+    top: 10px;
+}
+
+fieldset.button {
+    text-align: right;
+    padding-right: 50px;
+}
+
+.client__form button {
+    display: inline-block;
+    width: 125px;
+    background-color: #fff;
+    border: none;
+    border: 1px solid grey;
+    padding: 10px 30px;
+}
+
+.client__form button:focus {
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+}

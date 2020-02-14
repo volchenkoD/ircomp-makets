@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="build/style.css">
+    <title>Client</title>
+</head>
+
+<body>
+    <div class="main__wrapper">
+        <header class="main__header">
+            <div class="header__logo">
+                <div class="burger__menu">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="vertical__line"></div>
+                </div>
+                <a href="index.html" class="main_logo"></a>
+            </div>
+            <nav class="header__nav">
+                <ul>
+                    <li><select name="filials" id="filials" class="filials">
+                            <option value="All">Все</option>
+                            <option value="All">ул. Майская, д.10</option>
+                            <option value="All">ул. С.Билецкого, д.12/1</option>
+                        </select></li>
+                    <li><a href="#" class="mail"></a></li>
+                    <li><a href="#" class="settings"></a></li>
+                </ul>
+                <div class="main__cabinet">
+                    <span class="cabinet__name">Дмитрий</span>
+                    <img src="build/img/icons/Фото.png" alt="Фотография" class="cabinet__image" width="50px"
+                        height="50px">
+                </div>
+            </nav>
+        </header>
+        <div class="content">
+            <section class="left__nav">
+                <ul>
+                    <li><a href="#" class="nav__client">Клиенты</a></li>
+                    <li><a href="#" class="nav__lesson">Уроки</a></li>
+                    <li><a href="#" class="nav__group">Группы</a></li>
+                    <li><a href="#" class="nav__teacher">Учителя</a></li>
+                    <li><a href="#" class="nav__student">Учащиеся</a></li>
+                    <li><a href="#" class="nav__lids">Лиды</a></li>
+                    <li><a href="#" class="nav__contract">Абонименты</a></li>
+                    <li><a href="#" class="nav__add">Доступ в CRM</a></li>
+                    <li><a href="#" class="nav__exit">Выход</a></li>
+                </ul>
+            </section>
+            <main class="main__block">
+                <div class="panell__controll">
+                    <button class="add__client">Добавить</button>
+                    <button class="update__client">Править</button>
+                    <button class="mail__send">Рассылка</button>
+                    <button class="remove__client">Удалить</button>
+                </div>
+                <section class="main__table">
+                    <table class="client__table">
+                        <thead>
+                            <tr class="table__head">
+                                <th>Фото</th>
+                                <th>ФИО</th>
+                                <th>Дата рождения</th>
+                                <th>Заказчик</th>
+                                <th>Контакты заказчика</th>
+                                <th>Программы</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </section>
+            </main>
+        </div>
+        <div class="modal">
+            <form class="client__form">
+                <fieldset>
+                    <label for="source">Источник</label>
+                    <select name="source" id="source" class="source">
+                        <option value="">Выберите один из вариантов</option>
+                        <option value="Сайт">Сайт</option>
+                        <option value="Телефон">Телефон</option>
+                    </select>
+                </fieldset>
+                <fieldset><label for="fullName">ФИО</label>
+                    <input type="text" name="fullName" id="fullName" placeholder="Иванов Иван">
+                </fieldset>
+
+                <fieldset><label for="birthday">Дата рождения</label>
+                    <input type="date" name="birthday" id="birthday">
+                    <div class="gender__div">
+                        <p>Пол</p>
+                        <input type="radio" name="gender" id="man" value="М">
+                        <label for="man">М</label>
+                        <input type="radio" name="gender" id="woman" value="Ж">
+                        <label for="woman">Ж</label>
+                    </div>
+                </fieldset>
+                <fieldset class="about__student">
+                    <label for="school">Школа</label>
+                    <select name="school" id="school" class="school__value">
+                        <option value="Первая школа">Первая школа</option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                    </select>
+                    <label for="class" class="class__label">Класс</label>
+                    <select name="class" id="class" class="class__value">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                    </select>
+                    <label for="change" class="change__label">Смена</label>
+                    <select name="change" id="change" class="change__value">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                    </select>
+                </fieldset>
+                <fieldset>
+                    <label for="tel">Контакты</label>
+                    <input type="tel" name="tel" id="tel" placeholder="Введите номер телефона">
+                </fieldset>
+                <fieldset class="filials__contracts">
+                    <p class="filials__value">
+                        <label for="filial">Филиалы</label>
+                        <select name="filial" id="filial" class="filial">
+                            <option value="All">Все</option>
+                            <option value="ул. Майская, д.10">ул. Майская, д.10</option>
+                            <option value="ул. С.Билецкого, д.12/1">ул. С.Билецкого, д.12/1</option>
+                        </select>
+                    </p>
+                    <div class="type__contracts">
+                        <label for="contracrts">Тип договора</label>
+                        <p class="first__contract">ПФДО<input type="checkbox" name="contracrts" id="contracrts"></p>
+                        <p class="second__contract">Платные<input type="checkbox" name="contracrts"
+                                id="contract__comerc"></p>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <label for="customer">Заказчик</label>
+                    <input type="text" name="customer" id="customer" placeholder="Иванов Иван">
+                </fieldset>
+                <fieldset class="add__contacts">
+                    <label for="tel_customer" class="tel_customer">Контакты</label>
+                    <input type="tel" name="tel_customer" id="tel_customer" placeholder="Введите номер телефона"
+                        class="customer__tel">
+                    <span class="add__contact">Добавить</span>
+                </fieldset>
+                <fieldset>
+                    <label for="another">Примечание</label>
+                    <input type="text" name="another" id="another" placeholder="Введите необходимую нформацию">
+                </fieldset>
+                <fieldset class="button">
+                    <button type="button" class="close">Отмена</button>
+                    <button type="button" class="save">Сохранить</button>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+    <script src="./build/js/index.js"></script>
+</body>
+
+</html>
