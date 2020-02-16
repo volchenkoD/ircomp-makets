@@ -1,37 +1,44 @@
-/* Обертка */
-.main__wrapper {
-    background: url('../../build/img/bg/main_bg.png') no-repeat top right;
-    font-family: Open Sans, sans-serif;
-    font-weight: 400;
-    background-size: cover;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 3rem 1fr 3rem;
+    grid-template-rows: 75px 1fr;
     height: 100vh;
+    row-gap: 2.5rem;
+    padding-bottom: 30px;
+    background: url(/build/img/bg/main_bg.png) no-repeat center center;
+    background-size: cover;
+}
+
+.item {
+    border: 1px solid red;
+    background-color: grey;
+}
+
+.header__section,
+.main__information {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.header__section {
     display: grid;
-    grid-template-columns: 6.25rem 1200px 6.25rem;
-    grid-template-rows: 6.25rem auto;
-    width: 100vw;
-    overflow-x: hidden;
+    grid-template-columns: 300px auto;
+    column-gap: 1.5rem;
+    margin-top: 1rem;
 }
 
-.main__header,
-.content,
-.modal {
-    grid-column: 2/3;
-}
-
-.modal {
-    display: none;
-}
-
-/* Верхнее меню */
-.main__header {
-    grid-row-start: 1;
+.main__information {
     display: grid;
-    grid-template-columns: 18.75rem auto;
-    column-gap: 2.5rem;
-    height: 2.25rem;
+    grid-template-columns: 300px auto;
+    column-gap: 1.5rem;
 }
 
-/* Логотип с бургером */
 .header__logo {
     background-color: #fff;
     display: flex;
@@ -45,15 +52,15 @@
     width: 11.25rem;
     height: 4.25rem;
     background-repeat: no-repeat;
-    background-position: center 10px;
+    background-position: center center;
 }
 
 /* Бургер меню */
 .burger__menu {
     width: 3.125rem;
     height: 1.875rem;
-    margin-top: 30px;
-    margin-left: 1.5rem;
+    margin-top: 20px;
+    margin-left: 1rem;
     border-right: 2px solid lightgrey;
     padding-top: 5px;
 }
@@ -70,7 +77,6 @@
     background-color: #fff;
     justify-content: space-between;
     align-self: center;
-    margin-top: 1rem;
 }
 
 .header__nav ul {
@@ -121,11 +127,6 @@
 .cabinet__name,
 .cabinet__image {
     display: inline-block;
-}
-
-/* контентная часть */
-.content {
-    display: flex;
 }
 
 /* Боковое меню */
@@ -213,12 +214,6 @@
     margin-top: 2.5rem;
 }
 
-/* Основной блок */
-.main__block {
-    margin-left: 2.5rem;
-    width: 60rem;
-}
-
 /* Панель работы с клиентами */
 .panell__controll {
     background-color: #fff;
@@ -304,15 +299,16 @@
 
 /* Модальное окно */
 .modal {
+    display: none;
     position: absolute;
     background-color: rgba(204, 204, 204, .4);
     width: 100%;
-    height: 600px;
+    height: 100vh;
 }
 
 .client__form {
     width: 550px;
-    margin: 20px auto;
+    margin: 100px auto;
     background-color: #fff;
     border-radius: 15px;
     padding: 50px;
