@@ -1,3 +1,4 @@
+//Создание класа для нового пользователя
 class Client {
     constructor(source, fullName, birthday, gender, school, classClient, change, contacts, filial, contract, customer, customerContact) {
         this.source = source;
@@ -14,20 +15,36 @@ class Client {
         this.customerContact = customerContact;
     }
 }
-let modal = false;
+// Кнопка добавления клиента
 let addClient = document.querySelector('.add__client');
+// Кнопка закрытия модального окна
 let closeModal = document.querySelector('.modal .close');
+// Кнопка сохранения введенных данных
 let addButton = document.querySelector('.modal .save');
+// Получение формы
 let form = document.querySelector('.modal .client__form');
+//Добавление еще одного поля контактов
+let addContacts = document.querySelector('.add__contact');
+// Получение всех текстовых полей
+let inputsText = document.querySelectorAll('input[type="text"]');
+// Получение поля даты рождения
+let inputsDate = document.querySelectorAll('input[type="date"]');
+// Получение полей ввода номеров телефона
+let inputsPhone = document.querySelectorAll('input[type="tel"]');
+// Вывод модального окна
 addClient.onclick = () => {
     document.querySelector('.modal').style.display = 'block';
 }
+//Скрытие модального окна
 closeModal.onclick = () => {
     document.querySelector('.modal').style.display = 'none';
-    form.value = '';
 }
+//Добавление нового пользователя на страницу
 addButton.onclick = () => {
     addNewClient();
+    clearValue(inputsText);
+    clearValue(inputsDate);
+    clearValue(inputsPhone);
     document.querySelector('.modal').style.display = 'none';
 }
 
@@ -61,21 +78,21 @@ function addClientList() {
     console.log(clientNew);
     return clientNew;
 }
-
-let tableClient = document.querySelector('.client__table tbody');
-
+// Создание новой строки в таблице коиентов
 function addNewClient() {
     let client = addClientList();
-    let tableRow = document.createElement('tr');
-    tableRow.classList.add('padding__table');
-    tableRow.append(createEl());
-    tableRow.append(createEl(client.fullName));
-    tableRow.append(createEl(client.birthday));
-    tableRow.append(createEl(client.customer));
-    tableRow.append(createEl(client.customerContact));
-    tableClient.append(tableRow);
+    if (client.fullName) {
+        let tableRow = document.createElement('tr');
+        tableRow.classList.add('padding__table');
+        tableRow.append(createEl());
+        tableRow.append(createEl(client.fullName));
+        tableRow.append(createEl(client.birthday));
+        tableRow.append(createEl(client.customer));
+        tableRow.append(createEl(client.customerContact));
+        tableClient.append(tableRow);
+    }
 }
-
+// Создание элементов страницы
 function createEl(value) {
     let td = document.createElement('td');
     if (value !== undefined) {
@@ -86,8 +103,7 @@ function createEl(value) {
     td.classList.add('client__content');
     return td;
 }
-//Добавление еще одного поля контактов
-let addContacts = document.querySelector('.add__contact');
+// добавление еще одного поля для ввода номера телефона
 addContacts.onclick = () => {
     let input = document.createElement('input');
     let br = document.createElement('br');
@@ -97,4 +113,11 @@ addContacts.onclick = () => {
     addContacts.before(input);
     addContacts.before(br);
 }
-console.log(form);
+// Очистка значений страницы
+function clearValue(arr) {
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i].value !== '') {
+            arr[i].value = '';
+        }
+    }
+}

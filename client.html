@@ -77,6 +77,7 @@
         </div>
         <div class="modal">
             <form class="client__form">
+                <!-- Поле для выбора источника -->
                 <fieldset>
                     <label for="source">Источник</label>
                     <select name="source" id="source" class="source">
@@ -85,10 +86,11 @@
                         <option value="Телефон">Телефон</option>
                     </select>
                 </fieldset>
+                <!-- Поле для ввода имени пользователя -->
                 <fieldset><label for="fullName">ФИО</label>
                     <input type="text" name="fullName" id="fullName" placeholder="Иванов Иван">
                 </fieldset>
-
+                <!-- Поле для ввода дня рождения -->
                 <fieldset><label for="birthday">Дата рождения</label>
                     <input type="date" name="birthday" id="birthday">
                     <div class="gender__div">
@@ -99,6 +101,7 @@
                         <label for="woman">Ж</label>
                     </div>
                 </fieldset>
+                <!-- Поля для выбора школы, класса и смены пользователя -->
                 <fieldset class="about__student">
                     <label for="school">Школа</label>
                     <select name="school" id="school" class="school__value">
@@ -181,10 +184,12 @@
                         <option value="2">2</option>
                     </select>
                 </fieldset>
+                <!-- Поле для ввода контактов для связи с клиентами -->
                 <fieldset>
                     <label for="tel">Контакты</label>
                     <input type="tel" name="tel" id="tel" placeholder="Введите номер телефона">
                 </fieldset>
+                <!-- Поле для выбора филиала и типа договоров -->
                 <fieldset class="filials__contracts">
                     <p class="filials__value">
                         <label for="filial">Филиалы</label>
@@ -201,16 +206,19 @@
                                 id="contract__comerc"></p>
                     </div>
                 </fieldset>
+                <!-- Поле для ввода заказчика  -->
                 <fieldset>
                     <label for="customer">Заказчик</label>
                     <input type="text" name="customer" id="customer" placeholder="Иванов Иван">
                 </fieldset>
+                <!-- Поле для ввода контактов связи с заказчиками -->
                 <fieldset class="add__contacts">
                     <label for="tel_customer" class="tel_customer">Контакты</label>
                     <input type="tel" name="tel_customer" id="tel_customer" placeholder="Введите номер телефона"
                         class="customer__tel">
                     <span class="add__contact">Добавить</span>
                 </fieldset>
+                <!-- Поле для ввода особых заметок -->
                 <fieldset>
                     <label for="another">Примечание</label>
                     <input type="text" name="another" id="another" placeholder="Введите необходимую нформацию">
