@@ -76,7 +76,7 @@
             </main>
         </div>
         <div class="modal">
-            <form class="client__form">
+            <form class="client__form" autocomplete="off">
                 <!-- Поле для выбора источника -->
                 <fieldset>
                     <label for="source">Источник</label>
@@ -88,7 +88,8 @@
                 </fieldset>
                 <!-- Поле для ввода имени пользователя -->
                 <fieldset><label for="fullName">ФИО</label>
-                    <input type="text" name="fullName" id="fullName" placeholder="Иванов Иван">
+                    <input type="text" name="fullName" id="fullName" placeholder="Иванов Иван"
+                        autocomplete="new-password">
                 </fieldset>
                 <!-- Поле для ввода дня рождения -->
                 <fieldset><label for="birthday">Дата рождения</label>
@@ -209,7 +210,8 @@
                 <!-- Поле для ввода заказчика  -->
                 <fieldset>
                     <label for="customer">Заказчик</label>
-                    <input type="text" name="customer" id="customer" placeholder="Иванов Иван">
+                    <input type="text" name="customer" id="customer" placeholder="Иванов Иван"
+                        autocomplete="new-password">
                 </fieldset>
                 <!-- Поле для ввода контактов связи с заказчиками -->
                 <fieldset class="add__contacts">
