@@ -21,10 +21,12 @@ let addClient = document.querySelector('.add__client');
 let closeModal = document.querySelector('.modal .close');
 // Кнопка сохранения введенных данных
 let addButton = document.querySelector('.modal .save');
+console.log(addButton);
 // Получение формы
 let form = document.querySelector('.modal .client__form');
 //Добавление еще одного поля контактов
 let addContacts = document.querySelector('.add__contact');
+let tableClient = document.querySelector('.client__table');
 // Получение всех текстовых полей
 let inputsText = document.querySelectorAll('input[type="text"]');
 // Получение поля даты рождения
@@ -57,7 +59,9 @@ function addClientList() {
     let radio = document.querySelectorAll('.gender__div input');
     for (let i = 0; i < radio.length; i++) {
         if (radio[i].checked) {
+            radio[i].setAttribute('class', 'active__link');
             gender = radio[i].value;
+
         }
     }
     let school = document.querySelector('.school__value').value;
@@ -66,7 +70,7 @@ function addClientList() {
     let contact = document.querySelector('#tel').value;
     let filial = document.querySelector('.filial').value;
     let contract;
-    let checkbox = document.querySelectorAll('.type__contracts input');
+    let checkbox = document.querySelectorAll('.type__contracts .gender__input');
     for (let i = 0; i < checkbox.length; i++) {
         if (checkbox[i].checked) {
             contract = checkbox[i].value;
@@ -81,10 +85,15 @@ function addClientList() {
 // Создание новой строки в таблице коиентов
 function addNewClient() {
     let client = addClientList();
+    let tableRow = document.createElement('tr');
+    let tdCheckbox = document.createElement('td');
+    tableRow.classList.add('padding__table');
+    let checkbox = document.createElement('input');
+    checkbox.setAttribute('type', 'checkbox');
+    checkbox.setAttribute('class', 'active__checkbox');
+    tdCheckbox.append(checkbox);
+    tableRow.append(tdCheckbox);
     if (client.fullName) {
-        let tableRow = document.createElement('tr');
-        tableRow.classList.add('padding__table');
-        tableRow.append(createEl());
         tableRow.append(createEl(client.fullName));
         tableRow.append(createEl(client.birthday));
         tableRow.append(createEl(client.customer));
@@ -120,4 +129,10 @@ function clearValue(arr) {
             arr[i].value = '';
         }
     }
+}
+// Создание чекбокса
+function createCheckbox() {
+    const checkbox = document.createElement('input');
+    checkbox.setAttribute('type', 'checkbox');
+    return checkbox;
 }

@@ -9,27 +9,37 @@
 </head>
 
 <body>
+    <!-- обертка для всего содержимого -->
     <div class="wrapper">
+        <!-- секция шапки и верхнего меню -->
         <div class="header__section">
+            <!-- логотип с бургерным меню -->
             <div class="header__logo">
+                <!-- Бургер -->
                 <div class="burger__menu">
                     <div class="line"></div>
                     <div class="line"></div>
                     <div class="line"></div>
                     <div class="vertical__line"></div>
                 </div>
+                <!-- Логотип -->
                 <a href="index.html" class="main_logo"></a>
             </div>
+            <!-- Верхняя навигация -->
             <nav class="header__nav">
                 <ul>
+                    <!-- ВЫбор филиала -->
                     <li><select name="filials" id="filials" class="filials">
                             <option value="All">Все</option>
                             <option value="All">ул. Майская, д.10</option>
                             <option value="All">ул. С.Билецкого, д.12/1</option>
                         </select></li>
+                    <!-- Сделать рассылку -->
                     <li><a href="#" class="mail"></a></li>
+                    <!-- Настройки -->
                     <li><a href="#" class="settings"></a></li>
                 </ul>
+                <!-- Область личного кабинета -->
                 <div class="main__cabinet">
                     <span class="cabinet__name">Дмитрий</span>
                     <img src="build/img/icons/Фото.png" alt="Фотография" class="cabinet__image" width="50px"
@@ -37,10 +47,12 @@
                 </div>
             </nav>
         </div>
+        <!-- Блок с основным содержимым на странице -->
         <div class="main__information">
+            <!-- Левое навигационное меню -->
             <section class="left__nav">
                 <ul>
-                    <li><a href="#" class="nav__client">Клиенты</a></li>
+                    <li><a href="#" class="nav__client active__link">Клиенты</a></li>
                     <li><a href="#" class="nav__lesson">Уроки</a></li>
                     <li><a href="#" class="nav__group">Группы</a></li>
                     <li><a href="#" class="nav__teacher">Учителя</a></li>
@@ -51,18 +63,29 @@
                     <li><a href="#" class="nav__exit">Выход</a></li>
                 </ul>
             </section>
+            <!-- Основной рабочий раздел -->
             <main class="main__block">
+                <!-- Блок с  манипуляциями над данными -->
                 <div class="panell__controll">
-                    <button class="add__client">Добавить</button>
-                    <button class="update__client">Править</button>
-                    <button class="mail__send">Рассылка</button>
-                    <button class="remove__client">Удалить</button>
+                    <div class="button__controll">
+                        <button class="add__client">Добавить</button>
+                        <button class="update__client">Править</button>
+                        <button class="mail__send">Рассылка</button>
+                        <button class="remove__client">Удалить</button>
+                    </div>
+                    <div class="search__controll">
+                        <label for="search" id="search__label"></label>
+                        <input type="search" name="search" id="search" class="search"
+                            placeholder="Введите ФИО или программу">
+                        <button class="search__button">Поиск</button>
+                    </div>
                 </div>
+                <!-- Основные данные -->
                 <section class="main__table">
                     <table class="client__table">
                         <thead>
                             <tr class="table__head">
-                                <th>Фото</th>
+                                <th></th>
                                 <th>ФИО</th>
                                 <th>Дата рождения</th>
                                 <th>Заказчик</th>
@@ -75,11 +98,13 @@
                 </section>
             </main>
         </div>
+        <!-- Модальное окно для регистрации нового пользователя -->
         <div class="modal">
+            <!-- форма регистрации нового пользователя -->
             <form class="client__form" autocomplete="off">
                 <!-- Поле для выбора источника -->
                 <fieldset>
-                    <label for="source">Источник</label>
+                    <label class="modal__label" for="source">Источник</label>
                     <select name="source" id="source" class="source">
                         <option value="">Выберите один из вариантов</option>
                         <option value="Сайт">Сайт</option>
@@ -87,24 +112,24 @@
                     </select>
                 </fieldset>
                 <!-- Поле для ввода имени пользователя -->
-                <fieldset><label for="fullName">ФИО</label>
+                <fieldset><label class="modal__label" for="fullName">ФИО</label>
                     <input type="text" name="fullName" id="fullName" placeholder="Иванов Иван"
                         autocomplete="new-password">
                 </fieldset>
                 <!-- Поле для ввода дня рождения -->
-                <fieldset><label for="birthday">Дата рождения</label>
+                <fieldset><label for="birthday" class="modal__label">Дата рождения</label>
                     <input type="date" name="birthday" id="birthday">
                     <div class="gender__div">
                         <p>Пол</p>
-                        <input type="radio" name="gender" id="man" value="М">
+                        <input type="radio" name="gender" id="man" value="М" checked class="gender__input active__link">
                         <label for="man">М</label>
-                        <input type="radio" name="gender" id="woman" value="Ж">
+                        <input type="radio" name="gender" id="woman" value="Ж" class="gender__input">
                         <label for="woman">Ж</label>
                     </div>
                 </fieldset>
                 <!-- Поля для выбора школы, класса и смены пользователя -->
                 <fieldset class="about__student">
-                    <label for="school">Школа</label>
+                    <label for="school" class="modal__label">Школа</label>
                     <select name="school" id="school" class="school__value">
                         <option value="Первая школа">Первая школа</option>
                         <option value=""></option>
@@ -165,7 +190,7 @@
                         <option value=""></option>
                         <option value=""></option>
                     </select>
-                    <label for="class" class="class__label">Класс</label>
+                    <label for="class" class="modal__label class__label">Класс</label>
                     <select name="class" id="class" class="class__value">
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -179,7 +204,7 @@
                         <option value="10">10</option>
                         <option value="11">11</option>
                     </select>
-                    <label for="change" class="change__label">Смена</label>
+                    <label for="change" class="modal__label change__label">Смена</label>
                     <select name="change" id="change" class="change__value">
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -187,13 +212,13 @@
                 </fieldset>
                 <!-- Поле для ввода контактов для связи с клиентами -->
                 <fieldset>
-                    <label for="tel">Контакты</label>
+                    <label for="tel" class="modal__label">Контакты</label>
                     <input type="tel" name="tel" id="tel" placeholder="Введите номер телефона">
                 </fieldset>
                 <!-- Поле для выбора филиала и типа договоров -->
                 <fieldset class="filials__contracts">
                     <p class="filials__value">
-                        <label for="filial">Филиалы</label>
+                        <label for="filial" class="modal__label">Филиалы</label>
                         <select name="filial" id="filial" class="filial">
                             <option value="All">Все</option>
                             <option value="ул. Майская, д.10">ул. Майская, д.10</option>
@@ -201,7 +226,7 @@
                         </select>
                     </p>
                     <div class="type__contracts">
-                        <label for="contracrts">Тип договора</label>
+                        <label for="contracrts" class="modal__label">Тип договора</label>
                         <p class="first__contract">ПФДО<input type="checkbox" name="contracrts" id="contracrts"></p>
                         <p class="second__contract">Платные<input type="checkbox" name="contracrts"
                                 id="contract__comerc"></p>
@@ -209,20 +234,20 @@
                 </fieldset>
                 <!-- Поле для ввода заказчика  -->
                 <fieldset>
-                    <label for="customer">Заказчик</label>
+                    <label for="customer" class="modal__label">Заказчик</label>
                     <input type="text" name="customer" id="customer" placeholder="Иванов Иван"
                         autocomplete="new-password">
                 </fieldset>
                 <!-- Поле для ввода контактов связи с заказчиками -->
                 <fieldset class="add__contacts">
-                    <label for="tel_customer" class="tel_customer">Контакты</label>
+                    <label for="tel_customer" class="tel_customer modal__label">Контакты</label>
                     <input type="tel" name="tel_customer" id="tel_customer" placeholder="Введите номер телефона"
                         class="customer__tel">
                     <span class="add__contact">Добавить</span>
                 </fieldset>
                 <!-- Поле для ввода особых заметок -->
                 <fieldset>
-                    <label for="another">Примечание</label>
+                    <label for="another" class="modal__label">Примечание</label>
                     <input type="text" name="another" id="another" placeholder="Введите необходимую нформацию">
                 </fieldset>
                 <fieldset class="button">
@@ -232,7 +257,8 @@
             </form>
         </div>
     </div>
-    <script src="./build/js/index.js"></script>
+    <script src="build/js/index.js"></script>
+    <script src="build/js/aboutClient.js"></script>
 </body>
 
 </html>

@@ -10,6 +10,7 @@ const cssFiles = [
     'src/css/variable.css',
     'src/css/style.css',
     'src/css/client.css',
+    'src/css/change.css',
     'src/css/media.css'
 ]
 
