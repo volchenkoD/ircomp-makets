@@ -95,7 +95,42 @@
                         </thead>
                         <tbody></tbody>
                     </table>
+                    <!-- О клиенте -->
+                    <div class="client__info">
+                        <div class="button__client">
+                            <button class="button__back">Назад</button>
+                            <button class="button__change">Редактировать</button>
+                        </div>
+                        <div class="about__user">
+                            <div class="user__photo">
+                                <img src="build/img/photo-client.png" alt="Фото клиента">
+                                <label for="userPhoto" class="change__photo">Сменить фото</label>
+                                <input type="file" name="userPhoto" id="userPhoto" class="hidden__photo">
+                            </div>
+                            <div class="wrapper-user">
+                                <div class="main__client">
+                                    <p class="full__name">Пугко Ксения Викторовна</p>
+                                    <p>дата рождения <span>24.05.2003</span></p>
+                                    <p>Школа <span>Гимназия "Лаборатория Салахова"</span></p>
+                                    <p><span>Класс 6</span> <span>Смена 1</span></p>
+                                    <p class="phone__user"> +7912518245</p>
+                                </div>
+                                <div class="main__filiall">
+                                    <p>ул. Семена Билецкого 12/1</p>
+                                    <p>Тип договора <span>Платный</span></p>
+                                </div>
+                            </div>
+                            <div class="wrapper__customer">
+                                <h3>Заказчик</h3>
+                                <p>Журавлева Анна Валерьевна</p>
+                                <p class="phone__user"> +7912518245</p><br>
+                                <p class="phone__user"> +7912518245</p><br>
+                                <button>Сохранить</button>
+                            </div>
+                        </div>
+                    </div>
                 </section>
+
             </main>
         </div>
         <!-- Модальное окно для регистрации нового пользователя -->
@@ -257,8 +292,9 @@
             </form>
         </div>
     </div>
-    <script src="build/js/index.js"></script>
-    <script src="build/js/aboutClient.js"></script>
+    <script type="module" src="build/js/Client.js"></script>
+    <script type="module" src="build/js/index.js"></script>
+    <script type="module" src="build/js/aboutClient.js"></script>
 </body>
 
 </html>
