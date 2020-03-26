@@ -8,7 +8,6 @@ let addClient = document.querySelector('.add__client');
 let closeModal = document.querySelector('.modal .close');
 // Кнопка сохранения введенных данных
 let addButton = document.querySelector('.modal .save');
-console.log(addButton);
 // Получение формы
 let form = document.querySelector('.modal .client__form');
 //Добавление еще одного поля контактов

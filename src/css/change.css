@@ -9,7 +9,7 @@
     background-repeat: no-repeat;
     background-position: 15px;
     margin-left: 45px;
-    margin-top: 25px;
+    margin-top: 15px;
 }
 
 .button__change {
@@ -51,11 +51,27 @@
     padding: 0 55px;
 }
 
-.main__client p {
-    margin-bottom: 30px;
+.data__birday {
+    margin-left: 40px;
+    display: inline-block;
 }
 
-.main__client p span {
+.client__school {
+    margin-left: 10px;
+    display: inline-block;
+}
+
+.client__change {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main__client p {
+    margin-bottom: 20px;
+}
+
+.main__client p span,
+.client__filial-contract {
     border: 1px solid var(--main-text);
     padding: 5px 10px;
     border-radius: 10px;
@@ -65,20 +81,21 @@
     color: var(--main-color);
     border: 1px solid var(--main-text);
     padding: 5px 40px;
+    padding-bottom: 10px;
     padding-left: 10px;
     display: inline-block;
     border-radius: 10px;
-    margin-left: 100px;
+    margin-left: 50px;
 }
 
-.phone__user::before {
-    content: '';
+.phone {
+    border: none;
     display: inline-block;
     width: 23px;
     height: 23px;
     background-image: url(../../build/img/icons/phone__user.png);
     position: relative;
-    left: -115px;
+    left: -65px;
     top: 5px;
 }
 
@@ -87,8 +104,50 @@
     padding-top: 20px;
 }
 
+.client__filial {
+    margin-bottom: 20px;
+}
+
+.client__filial-icon {
+    border: none;
+    display: inline-block;
+    width: 30px;
+    height: 23px;
+    background-image: url(../../build/img/icons/icon-home.png);
+    position: relative;
+    left: -10px;
+    top: 5px;
+}
+
+.client__filial-contract {
+    margin-left: 30px;
+}
+
 .wrapper__customer {
     text-align: center;
     padding: 0 55px;
-    margin-left: 200px;
+}
+
+.text__customer {
+    border-left: 1px solid var(--main-text);
+    padding-left: 55px;
+}
+
+p.customer__phone {
+    margin-top: 30px;
+}
+
+.customer__phone span {
+    left: -50px;
+}
+
+.save__changes {
+    color: white;
+    background-color: var(--main-color);
+    outline: none;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 5px;
+    margin-top: 100px;
+    margin-left: 70px;
 }

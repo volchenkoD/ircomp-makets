@@ -11,6 +11,7 @@ const cssFiles = [
     'src/css/style.css',
     'src/css/client.css',
     'src/css/change.css',
+    'src/css/assecc.css',
     'src/css/media.css'
 ]
 
